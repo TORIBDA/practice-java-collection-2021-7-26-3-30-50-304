@@ -8,8 +8,6 @@ import java.util.stream.Collectors;
 public class StreamFilter {
 
     public List<Integer> filterEven(List<Integer> numbers) {
-        //throw new NotImplementedException();
-        //Start code here
         return numbers
                 .stream()
                 .filter(number -> number%2==0)
@@ -17,7 +15,10 @@ public class StreamFilter {
     }
 
     public List<String> filterEndWithS(List<String> words) {
-        throw new NotImplementedException();
+        return words
+                .stream()
+                .filter(word -> word.endsWith("s"))
+                .collect(Collectors.toList());
     }
 
     public List<Integer> getCommonElements(List<Integer> numbers, List<Integer> anotherNumbers) {
