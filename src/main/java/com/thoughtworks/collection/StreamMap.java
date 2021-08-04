@@ -28,7 +28,11 @@ public class StreamMap {
     }
 
     public List<String> mapLetter(List<Integer> numbers) {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        return numbers
+                .stream()
+                .map(number -> ALPHABET.get(number-1))
+                .collect(Collectors.toList());
     }
 
     public List<Integer> mapLength(List<String> words) {
